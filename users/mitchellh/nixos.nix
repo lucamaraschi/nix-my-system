@@ -10,9 +10,9 @@
   # Since we're using fish as our shell
   programs.fish.enable = true;
 
-  users.users.mitchellh = {
+  users.users.batman = {
     isNormalUser = true;
-    home = "/home/mitchellh";
+    home = "/home/batman";
     extraGroups = [ "docker" "wheel" ];
     shell = pkgs.fish;
     hashedPassword = "$6$p5nPhz3G6k$6yCK0m3Oglcj4ZkUXwbjrG403LBZkfNwlhgrQAqOospGJXJZ27dI84CbIYBNsTgsoH650C1EBsbCKesSVPSpB1";

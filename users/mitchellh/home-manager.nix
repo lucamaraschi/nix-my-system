@@ -172,12 +172,8 @@ in {
 
   programs.git = {
     enable = true;
-    userName = "Mitchell Hashimoto";
-    userEmail = "mitchell.hashimoto@gmail.com";
-    signing = {
-      key = "523D5DC389D273BC";
-      signByDefault = true;
-    };
+    userName = "Luca Maraschi";
+    userEmail = "luca.maraschi@gmail.com";
     aliases = {
       cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 -r git branch -d";
       prettylog = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(r) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative";
@@ -188,7 +184,7 @@ in {
       color.ui = true;
       core.askPass = ""; # needs to be empty to use terminal for ask pass
       credential.helper = "store"; # want to make this more secure
-      github.user = "mitchellh";
+      github.user = "lucamaraschi";
       push.default = "tracking";
       init.defaultBranch = "main";
     };
@@ -197,7 +193,7 @@ in {
   programs.go = {
     enable = true;
     goPath = "code/go";
-    goPrivate = [ "github.com/mitchellh" "github.com/hashicorp" "rfc822.mx" ];
+    goPrivate = [ "github.com/lucamaraschi" "github.com/hashicorp" "rfc822.mx" ];
   };
 
   programs.tmux = {
