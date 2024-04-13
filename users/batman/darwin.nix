@@ -9,19 +9,39 @@
     enable = true;
     casks  = [
       "1password"
-      "cleanshot"
+      "adobe-creative-cloud"
       "discord"
+      "dozer"
+      "figma"
+      "github"
       "google-chrome"
       "hammerspoon"
       "imageoptim"
       "istat-menus"
+      "kitty"
+      "microsoft-office"
+      "miro"
       "monodraw"
+      "notion"
+      "notion-calendar"
+      "orbstack"
+      "protonvpn"
       "raycast"
       "rectangle"
-      "screenflow"
+      "signal"
       "slack"
       "spotify"
+      "telegram"
+      "virtualbuddy"
+      "visual-studio-code"
+      "vivaldi"
+      "vmware-fusion"
+      "zoom"
     ];
+    # masApps = [
+    #   Tailscale = 1475387142;
+    #   Xcode = 497799835;
+    # ]
   };
 
   # The user should already exist, but we need to set this up so Nix knows
