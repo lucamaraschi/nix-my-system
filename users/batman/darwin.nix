@@ -41,7 +41,7 @@
     masApps = {
       Tailscale = 1475387142;
       Xcode = 497799835;
-    }
+    };
   };
 
   # The user should already exist, but we need to set this up so Nix knows
