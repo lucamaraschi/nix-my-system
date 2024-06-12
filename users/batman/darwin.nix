@@ -10,6 +10,7 @@
     casks  = [
       "1password"
       "adobe-creative-cloud"
+      "asana"
       "discord"
       "dozer"
       "figma"
@@ -24,6 +25,7 @@
       "monodraw"
       "notion"
       "notion-calendar"
+      "obs"
       "orbstack"
       "protonvpn"
       "raycast"
