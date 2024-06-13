@@ -187,6 +187,7 @@ in {
       github.user = "lucamaraschi";
       push.default = "tracking";
       init.defaultBranch = "main";
+      pull.rebase=true;
     };
   };
 
