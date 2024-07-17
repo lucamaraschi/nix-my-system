@@ -20,6 +20,7 @@
       "imageoptim"
       "istat-menus"
       "kitty"
+      "loom"
       "microsoft-office"
       "miro"
       "monodraw"
