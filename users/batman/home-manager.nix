@@ -236,6 +236,11 @@ in {
 
   programs.kitty = {
     enable = !isWSL;
+
+    settings = {
+      shell = "${pkgs.fish}/bin/fish";
+    };
+
     extraConfig = builtins.readFile ./kitty;
   };
 

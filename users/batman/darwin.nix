@@ -7,6 +7,20 @@
 
   homebrew = {
     enable = true;
+
+    brews = [
+    "coreutils"
+    "direnv"
+    "fd"
+    "gcc"
+    "git"
+    "grep"
+    "helm"
+    "jq"
+    "ripgrep"
+    "terraform"
+    "trash"
+  ];
     casks  = [
       "1password"
       "adobe-creative-cloud"
@@ -16,6 +30,7 @@
       "figma"
       "github"
       "google-chrome"
+      "google-cloud-sdk"
       "hammerspoon"
       "imageoptim"
       "istat-menus"
@@ -45,6 +60,60 @@
       Tailscale = 1475387142;
       Xcode = 497799835;
     };
+  };
+
+  security.pam.enableSudoTouchIdAuth = true;
+  system = {
+    keyboard = {
+      enableKeyMapping = true;
+      remapCapsLockToControl = true;
+    };
+
+    defaults = {
+      LaunchServices.LSQuarantine = true;
+
+      SoftwareUpdate = {
+        AutomaticallyInstallMacOSUpdates = true;
+      };
+
+      dock = {
+        static-only = true;
+        tilesize = 20;
+      };
+
+      finder = {
+        AppleShowAllExtensions = true;
+        AppleShowAllFiles = true;
+        CreateDesktop = false;
+        ShowPathbar = true;
+        ShowStatusBar = true;
+      };
+
+      NSGlobalDomain = {
+        AppleInterfaceStyle = "Dark";
+        AppleShowAllExtensions = true;
+        AppleShowAllFiles = true;
+        NSDocumentSaveNewDocumentsToCloud = false; 
+        ApplePressAndHoldEnabled = false;
+      };
+
+      CustomUserPreferences = {
+        "~/Library/Preferences/ByHost/com.apple.controlcenter".BatteryShowPercentage = true;
+        "com.apple.AdLib".allowApplePersonalizedAdvertising = false;
+        "com.apple.WindowManager".GloballyEnabled = true;
+      };
+    };
+  };
+
+  fonts = {
+    fontDir = { enable = true; };
+    fonts = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
+      font-awesome
+      material-design-icons
+      tenderness
+      spleen
+    ];
   };
 
   # The user should already exist, but we need to set this up so Nix knows
