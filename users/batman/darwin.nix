@@ -24,7 +24,8 @@
     casks  = [
       "1password"
       "adobe-creative-cloud"
-      "asana"
+      "arc"
+      "blender"
       "discord"
       "dozer"
       "figma"
@@ -52,7 +53,6 @@
       "telegram"
       "virtualbuddy"
       "visual-studio-code"
-      "vivaldi"
       "vmware-fusion"
       "zoom"
     ];
