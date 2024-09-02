@@ -17,6 +17,7 @@
     "grep"
     "helm"
     "jq"
+    "k3d"
     "ripgrep"
     "terraform"
     "trash"
@@ -27,6 +28,7 @@
       "arc"
       "blender"
       "discord"
+      "docker"
       "dozer"
       "figma"
       "github"
@@ -59,6 +61,8 @@
     masApps = {
       Tailscale = 1475387142;
       Xcode = 497799835;
+      "iA-Writer" = 775737590;
+      Grammarly = 1462114288;
     };
   };
 
