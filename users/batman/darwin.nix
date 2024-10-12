@@ -18,6 +18,7 @@
     "helm"
     "jq"
     "k3d"
+    "pnpm"
     "ripgrep"
     "terraform"
     "trash"
@@ -30,22 +31,27 @@
       "discord"
       "docker"
       "dozer"
+      "elgato-camera-hub"
       "figma"
       "github"
       "google-chrome"
       "google-cloud-sdk"
+      "grammarly-desktop"
       "hammerspoon"
       "imageoptim"
       "istat-menus"
       "kitty"
+      "linear-linear"
       "loom"
       "microsoft-office"
+      "microsoft-teams"
       "miro"
       "monodraw"
       "notion"
       "notion-calendar"
       "obs"
       "orbstack"
+      "proton-mail"
       "protonvpn"
       "raycast"
       "rectangle"
@@ -62,7 +68,6 @@
       Tailscale = 1475387142;
       Xcode = 497799835;
       "iA-Writer" = 775737590;
-      Grammarly = 1462114288;
     };
   };
 
@@ -109,14 +114,13 @@
     };
   };
 
-  fonts = {
-    fontDir = { enable = true; };
-    fonts = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
-      font-awesome
-      material-design-icons
-      tenderness
-      spleen
+ fonts = {
+    packages = [
+      (pkgs.nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
+      pkgs.font-awesome
+      pkgs.material-design-icons
+      pkgs.tenderness
+      pkgs.spleen
     ];
   };
 

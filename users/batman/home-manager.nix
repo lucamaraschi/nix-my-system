@@ -44,7 +44,7 @@ in {
     pkgs.zigpkgs."0.13.0"
 
     # Node is required for Copilot.vim
-    pkgs.nodejs
+    pkgs.nodejs_22
   ] ++ (lib.optionals isDarwin [
     # This is automatically setup on Linux
     pkgs.cachix

@@ -112,8 +112,6 @@ in {
   # Manage fonts. We pull these from a secret directory since most of these
   # fonts require a purchase.
   fonts = {
-    fontDir.enable = true;
-
     packages = [
       pkgs.fira-code
       pkgs.jetbrains-mono
@@ -140,6 +138,9 @@ in {
     # You can test if you don't need this by deleting this and seeing
     # if the clipboard sill works.
     gtkmm3
+
+    ## Node packages
+    nodePackages."autocannon"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
