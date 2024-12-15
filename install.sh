@@ -5,6 +5,10 @@ set -e
 HOST_NAME=$1
 NIXOS_USERNAME=$2
 
+sudo -v
+
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 function setup_darwin_based_host() {
   if [[ "$OSTYPE" != "darwin"* ]]; then
     echo "Please run this script on a Darwin-based machine"

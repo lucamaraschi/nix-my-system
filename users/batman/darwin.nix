@@ -26,7 +26,9 @@
     casks  = [
       "1password"
       "adobe-creative-cloud"
+      "autodesk-fusion"
       "arc"
+      "bambu-studio"
       "blender"
       "discord"
       "docker"
