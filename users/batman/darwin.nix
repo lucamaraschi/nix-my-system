@@ -34,6 +34,7 @@
       "docker"
       "dozer"
       "figma"
+      "ghostty"
       "github"
       "google-chrome"
       "google-cloud-sdk"
