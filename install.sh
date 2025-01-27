@@ -5,9 +5,11 @@ set -e
 HOST_NAME=$1
 NIXOS_USERNAME=$2
 
-sudo -v
-
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+sudo -v || { echo "Authentication failed"; exit 1; }
+# Start a background job to refresh sudo credentials every 60 seconds
+# This process will run until the main script finishes.
+( while true; do sudo -v; sleep 60; done ) &
+SUDO_REFRESH_PID=$!
 
 function setup_darwin_based_host() {
   if [[ "$OSTYPE" != "darwin"* ]]; then
@@ -66,6 +68,9 @@ function setup_darwin_based_host() {
   git pull
   make
   cd
+
+  kill "$SUDO_REFRESH_PID"
+  echo "Done. Sudo refresh process killed."
 }
 
 setup_darwin_based_host
