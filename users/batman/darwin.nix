@@ -27,7 +27,6 @@
       "1password"
       "adobe-creative-cloud"
       "autodesk-fusion"
-      "arc"
       "bambu-studio"
       "blender"
       "discord"
@@ -64,6 +63,7 @@
       "virtualbuddy"
       "visual-studio-code"
       "vmware-fusion"
+      "zen-browser"
       "zoom"
     ];
     masApps = {
